@@ -1,0 +1,5 @@
+OLED是单色，必须用  font_bin_maker.py，
+双击打不开就需要安装依赖。
+
+
+lvgl_conv_tool.exe生成lvgl字体
