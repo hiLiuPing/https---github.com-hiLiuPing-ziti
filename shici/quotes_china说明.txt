@@ -1,0 +1,33 @@
+#pragma pack(push,1)
+
+typedef struct
+{
+    uint32_t magic;      // "QIDX"
+    uint16_t version;    // 1
+    uint16_t reserved;   // 0
+
+    uint32_t count;      // 总条数
+    uint32_t data_offset;// 数据区偏移
+} QIDX_Header;
+
+typedef struct
+{
+    uint32_t offset;     // 相对于文件开头
+    uint32_t length;     // UTF8字节长度
+} QIDX_Item;
+
+#pragma pack(pop)
+Header内容
+字段	值
+magic	"QIDX"
+version	1
+reserved	0
+count	8973
+data_offset	71800
+
+其中：
+
+Header：16 Bytes
+每条索引：8 Bytes
+数据区起始：16 + 8973 × 8 = 71800
+文件总大小：452133 Bytes
